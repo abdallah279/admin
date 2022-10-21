@@ -75,16 +75,17 @@ collapse.forEach((col) =>{
 })
 
 
-
-$(document).ready(function(){
-  let datePickerM = document.getElementById('ui-datepicker-div');
-  let inputDatePicker = document.getElementById('startDate');
-  if(inputDatePicker){
-    inputDatePicker.onfocus = ()=>{
-      datePickerM.style.top = "48%";
+let inputDatePicker = document.getElementById('startDate');
+if(inputDatePicker){
+  $(document).ready(function(){
+    let datePickerM = document.getElementById('ui-datepicker-div');
+    if(inputDatePicker){
+      inputDatePicker.onfocus = ()=>{
+        datePickerM.style.top = "48%";
+      }
     }
-  }
-});
+  });
+}
 
 
 
@@ -202,11 +203,11 @@ if(myDataTable){
     buttons: [
         {
             extend: 'print',
-            text:  `<img src='../imgs/icons/Icon ionic-ios-print.png' />`,
+            text:  `<img src='imgs/icons/Icon ionic-ios-print.png' />`,
         },
         {
             extend: 'excelHtml5',
-            text:  `<img src='../imgs/icons/Icon simple-microsoftexcel.png' />`,
+            text:  `<img src='imgs/icons/Icon simple-microsoftexcel.png' />`,
         }
     ]
   }).container().appendTo($('#buttons'));
